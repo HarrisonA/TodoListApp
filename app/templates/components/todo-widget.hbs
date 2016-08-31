@@ -1,0 +1,13 @@
+{{add-todo onUserAdd=(action 'addAnotherTodo')}}
+<!-- onUserAdd is a component property that is set to a function that
+invokes the todo-widget action 'addAnotherTodo'.
+
+Ex: this.get('onUserAdd')(someArg);  // called in the add-todo.js file
+'someArg' is passed to the prop 'onUserAdd' AND as a result, the action
+'addAnotherTodo' ALSO recieves 'someArg' as an argument  -->
+
+<ul>
+  {{#each todos as |todo|}}
+    <li>  {{ todo.text }}</li>
+  {{/each}}
+</ul>
